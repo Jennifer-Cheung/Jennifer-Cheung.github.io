@@ -1,0 +1,9 @@
+@use "../../../../styles/colors.scss" as *;
+
+.tab {
+  cursor: pointer;
+}
+
+.active {
+  color: $red;
+}

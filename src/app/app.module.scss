@@ -1,0 +1,58 @@
+@use "../../styles/colors.scss" as *;
+
+.about-me {
+  background-color: $light-red;
+  color: $dark-red;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  gap: 12.5rem;
+  align-self: stretch;
+}
+
+.left {
+  display: flex;
+  width: 44rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.25rem;
+}
+
+.buttons {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+  align-self: stretch;
+}
+
+.projects {
+  display: flex;
+  padding: 2.5rem 0rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  align-self: stretch;
+  background-color: $light-green;
+  color: $dark-green;
+}
+
+.project-block {
+  display: flex;
+  padding: 0rem 7.5rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.5rem;
+  align-self: stretch;
+}
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.author-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}

@@ -1,0 +1,19 @@
+@use "../../../styles/colors.scss" as *;
+
+.button {
+  display: flex;
+  padding: 1rem 1.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  background-color: $red;
+  color: $light-red;
+  border: none;
+  cursor: pointer;
+}
+
+.hollow {
+  background-color: $light-red;
+  color: $red;
+  border: 1px solid $red;
+}

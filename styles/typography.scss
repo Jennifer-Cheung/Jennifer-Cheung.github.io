@@ -1,0 +1,79 @@
+@mixin display {
+  /* Display */
+  font-family: "DM Serif Display";
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@mixin heading {
+  /* Heading */
+  font-family: "DM Serif Display";
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@mixin subheading {
+  /* Subheading */
+  font-family: "DM Sans";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+@mixin emphasis {
+  /* Emphasis */
+  font-family: "DM Sans";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: .08rem;
+  text-transform: uppercase;
+}
+
+@mixin medium {
+  /* Medium */
+  font-family: "DM Sans";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+@mixin body {
+  /* Body */
+  font-family: "DM Sans";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+strong {
+  @include display;
+}
+
+h1 {
+  @include heading;
+}
+
+h2 {
+  @include subheading;
+}
+
+em {
+  @include emphasis;
+}
+
+a, b {
+  @include medium;
+}
+
+span, p, body, button {
+  @include body;
+}
