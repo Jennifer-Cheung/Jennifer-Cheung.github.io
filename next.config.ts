@@ -7,4 +7,4 @@ const nextConfig: NextConfig = {
   basePath: '/Portfolio',
 };
 
-export default nextConfig;
+module.exports = nextConfig;
