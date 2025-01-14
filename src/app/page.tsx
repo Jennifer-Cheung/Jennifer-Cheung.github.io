@@ -18,7 +18,6 @@ import Magellan from "@/img/Magellan.jpg"
 import TestingMagellan from "@/img/TestingMagellan.jpg"
 import HKFlagPhoto from "@/img/HKFlagPhoto.jpg"
 import Resume from "@/assets/jennifer-cheung-cv.pdf"
-import KirbyDemoFinal from "@/assets/KirbyDemoFinal.mp4"
 
 export type Section = 'about-me' | 'projects' | 'contact-me'
 
@@ -134,9 +133,12 @@ export default function Home() {
           </p>
 
           <div className={styles['video-wrapper']}>
-            <video width="100%" height="auto" controls src={KirbyDemoFinal} />
+            {/* <video width="100%" height="auto" controls src={KirbyDemoFinal} /> */}
+            <iframe width="420" height="315"
+              src="https://youtu.be/p0ov-WHk-_M">
+            </iframe> 
           </div>
-
+          
           <p>
           The game is built on an STM32, with an LCD monitor (with ILI9341 driver) and Bluetooth connection to the controller. The hardware is rather simple, and the focus is on the software part, which was coded in C.
           </p>
