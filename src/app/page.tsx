@@ -6,7 +6,17 @@ import Button from "@/components/Button/Button"
 import Image from "next/image"
 import Link from "@/components/Link/Link"
 import { useCallback, useEffect, useRef, useState } from "react"
-import Avatar from "./Avatar.png"
+import Avatar from "@/img/Avatar.png"
+import KirbyCover from "@/img/KirbyCover.jpg"
+import TileMap from "@/img/TileMap.png"
+import HackathonPhoto from "@/img/HackathonPhoto.jpg"
+import CodeToGiveScreenshot from "@/img/CodeToGiveScreenshot.png"
+import TeamPhoto from "@/img/TeamPhoto.jpg"
+import USThingScreenshot from "@/img/USThingScreenshot.png"
+import RobogamesTeamPhoto from "@/img/RobogamesTeamPhoto.jpg"
+import Magellan from "@/img/Magellan.jpg"
+import TestingMagellan from "@/img/TestingMagellan.jpg"
+import HKFlagPhoto from "@/img/HKFlagPhoto.jpg"
 
 export type Section = 'about-me' | 'projects' | 'contact-me'
 
@@ -108,7 +118,7 @@ export default function Home() {
           <h2>Kirby Platformer Game on STM32</h2>
 
           <div className={styles['image-wrapper']}>
-            <Image alt='Kirby cover image' src='/KirbyCover.jpg' width={0} height={0} sizes="100vw" style={{width: '100%', height: 'auto'}} />
+            <Image alt='Kirby cover image' src={KirbyCover} width={0} height={0} sizes="100vw" style={{width: '100%', height: 'auto'}} />
           </div>
 
           <Link href='https://github.com/Jennifer-Cheung/ELEC3300' section={'projects'}>Github Link (partial code)</Link>
@@ -158,7 +168,7 @@ export default function Home() {
           </p>
 
           <div className={styles['image-wrapper']}>
-            <Image alt="Tile map image" src='/TileMap.png' width={0} height={0} sizes="100vw" style={{width: '100%', height: 'auto'}} />
+            <Image alt="Tile map image" src={TileMap} width={0} height={0} sizes="100vw" style={{width: '100%', height: 'auto'}} />
           </div>
 
           <p>
@@ -193,7 +203,7 @@ export default function Home() {
           <h2>Morgan Stanley Code to Give Hackathon second place</h2>
 
           <div className={styles['image-wrapper']}>
-            <Image alt="Hackathon team photo" src='/HackathonPhoto.jpg' width={0} height={0} sizes="100vw" style={{width: '100%', height: 'auto'}} />
+            <Image alt="Hackathon team photo" src={HackathonPhoto} width={0} height={0} sizes="100vw" style={{width: '100%', height: 'auto'}} />
           </div>
 
           <Link href="https://github.com/Nidhi153/ZubinHackathon" section={'projects'}>Github link (click to see our full project description!)</Link>
@@ -203,7 +213,7 @@ export default function Home() {
           </p>
 
           <div className={styles['image-wrapper']}>
-            <Image alt="Hackathon application screenshot" src='/CodeToGiveScreenshot.png' width={0} height={0} sizes="100vw" style={{width: '100%', height: 'auto'}} />
+            <Image alt="Hackathon application screenshot" src={CodeToGiveScreenshot} width={0} height={0} sizes="100vw" style={{width: '100%', height: 'auto'}} />
           </div>
 
           <span>Here&apos;s our Canva presentation deck:</span>
@@ -254,7 +264,7 @@ export default function Home() {
           <h2>HKUST USThing member</h2>
 
           <div className={styles['image-wrapper']}>
-            <Image alt="Team photo" src='/TeamPhoto.jpg' width={0} height={0} sizes="100vw" style={{width: '100%', height: 'auto'}} />
+            <Image alt="Team photo" src={TeamPhoto} width={0} height={0} sizes="100vw" style={{width: '100%', height: 'auto'}} />
           </div>
 
           <p>
@@ -262,7 +272,7 @@ export default function Home() {
           </p>
 
           <div className={styles['image-wrapper']}>
-            <Image alt="USThing screenshot" src='/USThingScreenshot.png' width={0} height={0} sizes="100vw" style={{width: '100%', height: 'auto'}} />
+            <Image alt="USThing screenshot" src={USThingScreenshot} width={0} height={0} sizes="100vw" style={{width: '100%', height: 'auto'}} />
           </div>
 
           <p>
@@ -275,7 +285,7 @@ export default function Home() {
           <h2>Robotics team member <br></br> RoboGames 2023: RoboMagellan second place</h2>
 
           <div className={styles['image-wrapper']}>
-            <Image alt="Robotics Team photo" src='/RobogamesTeamPhoto.jpg' width={0} height={0} sizes="100vw" style={{width: '100%', height: 'auto'}} />
+            <Image alt="Robotics Team photo" src={RobogamesTeamPhoto} width={0} height={0} sizes="100vw" style={{width: '100%', height: 'auto'}} />
           </div>
 
           <p>
@@ -283,7 +293,7 @@ export default function Home() {
           </p>
 
           <div className={styles['image-wrapper']}>
-            <Image alt="Megellan car photo" src='/Magellan.jpg' width={0} height={0} sizes="100vw" style={{width: '100%', height: 'auto'}} />
+            <Image alt="Megellan car photo" src={Magellan} width={0} height={0} sizes="100vw" style={{width: '100%', height: 'auto'}} />
           </div>
 
           <p>
@@ -291,7 +301,7 @@ export default function Home() {
           </p>
 
           <div className={styles['image-wrapper']}>
-            <Image alt="Testing the car" src='/TestingMagellan.jpg' width={0} height={0} sizes="100vw" style={{width: '100%', height: 'auto'}} />
+            <Image alt="Testing the car" src={TestingMagellan} width={0} height={0} sizes="100vw" style={{width: '100%', height: 'auto'}} />
           </div>
 
           <p>
@@ -299,7 +309,7 @@ export default function Home() {
           </p>
 
           <div className={styles['image-wrapper']}>
-            <Image alt="Photo with HK flag" src='/HKFlagPhoto.jpg' width={0} height={0} sizes="100vw" style={{width: '100%', height: 'auto'}} />
+            <Image alt="Photo with HK flag" src={HKFlagPhoto} width={0} height={0} sizes="100vw" style={{width: '100%', height: 'auto'}} />
           </div>
         </div>
       </div>
