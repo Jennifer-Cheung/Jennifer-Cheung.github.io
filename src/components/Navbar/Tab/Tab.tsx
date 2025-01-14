@@ -4,7 +4,7 @@ type Props = {
   color: 'red' | 'green' | 'brown',
   isActive?: boolean,
   children: string,
-  onClick: MouseEventHandler<HTMLElement>,
+  onClick: React.MouseEventHandler<HTMLElement>,
 }
 
 export default function Tab({ children, isActive=false, color, onClick }: Props) {

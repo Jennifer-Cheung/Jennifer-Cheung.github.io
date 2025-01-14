@@ -4,9 +4,9 @@ import { Section } from '../../app/page'
 
 type Props = {
   section: Section,
-  aboutMeOnClick: MouseEventHandler<HTMLElement>,
-  projectsOnClick: MouseEventHandler<HTMLElement>,
-  contactMeOnClick: MouseEventHandler<HTMLElement>,
+  aboutMeOnClick: React.MouseEventHandler<HTMLElement>,
+  projectsOnClick: React.MouseEventHandler<HTMLElement>,
+  contactMeOnClick: React.MouseEventHandler<HTMLElement>,
 }
 
 export default function Navbar({ section, aboutMeOnClick, projectsOnClick, contactMeOnClick }: Props) {

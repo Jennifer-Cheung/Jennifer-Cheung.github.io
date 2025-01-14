@@ -3,7 +3,7 @@ import styles from './Button.module.scss'
 type Props = {
   children: string,
   isHollow?: boolean,
-  onClick: MouseEventHandler<HTMLButtonElement>,
+  onClick: React.MouseEventHandler<HTMLButtonElement>,
 }
 
 export default function Button({ children, isHollow=false, onClick }: Props) {

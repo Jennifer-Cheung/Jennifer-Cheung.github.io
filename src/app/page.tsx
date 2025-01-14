@@ -137,7 +137,7 @@ export default function Home() {
           <h3>Walking animation</h3>
 
           <p>
-          My next step was to get Kirby moving. I found a <Link href="https://www.spriters-resource.com/ds_dsi/kssu/sheet/14758/">sprite sheet</Link> online and cropped out the key frames. To animate Kirby, I looped through the key frames. And to make Kirby move left and right, I redrew one column of background pixels and drew Kirby at the new position.
+          My next step was to get Kirby moving. I found a <Link href="https://www.spriters-resource.com/ds_dsi/kssu/sheet/14758/" section='projects'>sprite sheet</Link> online and cropped out the key frames. To animate Kirby, I looped through the key frames. And to make Kirby move left and right, I redrew one column of background pixels and drew Kirby at the new position.
           </p>
 
           <h3>State changes</h3>
@@ -205,7 +205,7 @@ export default function Home() {
             <Image alt="Hackathon application screenshot" src='/CodeToGiveScreenshot.png' width={0} height={0} sizes="100vw" style={{width: '100%', height: 'auto'}} />
           </div>
 
-          <span>Here's our Canva presentation deck:</span>
+          <span>Here&apos;s our Canva presentation deck:</span>
           {/* Canva deck block */}
           <div
     style={{
@@ -265,7 +265,7 @@ export default function Home() {
           </div>
 
           <p>
-          On the web team's side, we are using NextJS as our primary framework, alongside with Tailwind, Drizzle, and other libraries to build our web applications. On the UI/UX team's side, I do project management and task coordination so our members can work comfortably together. Currently, we are building a web application, which will be released by February. Stay tuned for our updates! ;)
+          On the web team&apos;s side, we are using NextJS as our primary framework, alongside with Tailwind, Drizzle, and other libraries to build our web applications. On the UI/UX team&apos;s side, I do project management and task coordination so our members can work comfortably together. Currently, we are building a web application, which will be released by February. Stay tuned for our updates! ;)
           </p>
         </div>
 
