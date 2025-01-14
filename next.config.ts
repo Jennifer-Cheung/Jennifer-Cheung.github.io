@@ -6,13 +6,7 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   basePath: '/Portfolio',
   assetPrefix: '/Portfolio',
-  webpack: (config) => {
-    config.module.rules.push({
-      test: /\.(pdf|mp4)$/,
-      type: 'asset/resource'
-    });
-    return config;
-  }
+  images: { unoptimized: true }
 };
 
 module.exports = nextConfig;

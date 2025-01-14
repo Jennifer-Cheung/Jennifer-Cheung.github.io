@@ -133,9 +133,16 @@ export default function Home() {
 
           <div className={styles['video-wrapper']}>
             {/* <video width="100%" height="auto" controls src={KirbyDemoFinal} /> */}
-            <iframe width="420" height="315"
-              src="https://youtu.be/p0ov-WHk-_M">
-            </iframe> 
+            <iframe 
+              width="560" 
+              height="315" 
+              src="https://www.youtube.com/embed/p0ov-WHk-_M?si=d3dq-ucEItIKgaMT" 
+              title="YouTube video player" 
+              frameBorder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerPolicy="strict-origin-when-cross-origin" 
+              allowFullScreen
+            />
           </div>
           
           <p>
