@@ -6,6 +6,7 @@ import Button from "@/components/Button/Button"
 import Image from "next/image"
 import Link from "@/components/Link/Link"
 import { useCallback, useEffect, useRef, useState } from "react"
+import Avatar from "./Avatar.png"
 
 export type Section = 'about-me' | 'projects' | 'contact-me'
 
@@ -89,7 +90,7 @@ export default function Home() {
             </div>
           </div>
 
-          <Image alt='Avatar' src='/Avatar.png' width='500' height='500' className={styles.avatar} />
+          <Image alt='Avatar' src={Avatar} width='500' height='500' className={styles.avatar} />
         </div>
 
         <div className={styles['buttons-narrow']}>
