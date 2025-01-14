@@ -17,6 +17,8 @@ import RobogamesTeamPhoto from "@/img/RobogamesTeamPhoto.jpg"
 import Magellan from "@/img/Magellan.jpg"
 import TestingMagellan from "@/img/TestingMagellan.jpg"
 import HKFlagPhoto from "@/img/HKFlagPhoto.jpg"
+import Resume from "@/assets/jennifer-cheung-cv.pdf"
+import KirbyDemoFinal from "@/assets/KirbyDemoFinal.mp4"
 
 export type Section = 'about-me' | 'projects' | 'contact-me'
 
@@ -132,7 +134,7 @@ export default function Home() {
           </p>
 
           <div className={styles['video-wrapper']}>
-            <video width="100%" height="auto" controls src="/KirbyDemoFinal.mp4" />
+            <video width="100%" height="auto" controls src={KirbyDemoFinal} />
           </div>
 
           <p>
@@ -319,9 +321,9 @@ export default function Home() {
         <h1>Contact Me</h1>
         <span>Email: <Link href="mailto:csjcheung@connect.ust.hk" section={'contact-me'}>csjcheung@connect.ust.hk</Link></span>
         <span>Github: <Link href="https://github.com/Jennifer-Cheung" section={'contact-me'}>Jennifer-Cheung</Link></span>
-        <Link href="/jennifer-cheung-cv.pdf" download section={'contact-me'}>Download my resume</Link>
+        <Link href={Resume} download section={'contact-me'}>Download my resume</Link>
         <embed
-          src="/jennifer-cheung-cv.pdf"
+          src={Resume}
           type="application/pdf"
           width="1200px"
           height="1500px"
