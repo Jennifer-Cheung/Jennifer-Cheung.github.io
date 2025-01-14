@@ -1,7 +1,7 @@
 @mixin display {
   /* Display */
   font-family: "DM Serif Display";
-  font-size: 3rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -23,6 +23,19 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  margin-top: 3rem;
+  margin-bottom: 0;
+}
+
+@mixin section-title {
+  /* Section title */
+  font-family: "DM Sans";
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 0.8rem;
+  margin-bottom: 0;
 }
 
 @mixin emphasis {
@@ -48,10 +61,14 @@
 @mixin body {
   /* Body */
   font-family: "DM Sans";
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+
+  @media (width > 1440px) {
+    font-size: 1rem;
+  }
 }
 
 strong {
@@ -66,6 +83,10 @@ h2 {
   @include subheading;
 }
 
+h3 {
+  @include section-title;
+}
+
 em {
   @include emphasis;
 }
@@ -74,6 +95,6 @@ a, b {
   @include medium;
 }
 
-span, p, body, button {
+span, p, button {
   @include body;
 }

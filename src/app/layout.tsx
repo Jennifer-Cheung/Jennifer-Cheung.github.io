@@ -19,8 +19,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${dmSerifDisplay.className} ${dmSans.className}`}>
-      <body>
+    <html lang="en">
+      <head>
+        <link rel="icon" type="image/x-icon" href="/Avatar.png" />
+        <title>Jennifer Cheung</title>
+      </head>
+      <body className={`${dmSerifDisplay.className} ${dmSans.className}`}>
         {children}
       </body>
     </html>

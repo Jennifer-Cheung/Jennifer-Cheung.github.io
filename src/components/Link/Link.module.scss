@@ -1,7 +1,21 @@
 @use "../../../styles/colors.scss" as *;
 
 .link {
-  text-decoration: none;
-  border-bottom: 2px solid $green;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.red {
+  text-decoration-color: $red;
+  color: $dark-red;
+}
+
+.green {
+  text-decoration-color: $green;
   color: $dark-green;
+}
+
+.brown {
+  text-decoration-color: $brown;
+  color: $dark-brown;
 }

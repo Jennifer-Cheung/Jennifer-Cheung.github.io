@@ -4,6 +4,26 @@
   cursor: pointer;
 }
 
-.active {
+.red {
+  color: $dark-red;
+}
+
+.active.red {
   color: $red;
+}
+
+.green {
+  color: $dark-green;
+}
+
+.active.green {
+  color: $green;
+}
+
+.brown {
+  color: $dark-brown;
+}
+
+.active.brown {
+  color: $brown;
 }
