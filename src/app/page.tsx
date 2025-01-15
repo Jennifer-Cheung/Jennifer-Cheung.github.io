@@ -132,7 +132,6 @@ export default function Home() {
           </p>
 
           <div className={styles['video-wrapper']}>
-            {/* <video width="100%" height="auto" controls src={KirbyDemoFinal} /> */}
             <iframe 
               width="560" 
               height="315" 
@@ -142,6 +141,7 @@ export default function Home() {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
               referrerPolicy="strict-origin-when-cross-origin" 
               allowFullScreen
+              style={{width: '100%', height: 'calc(100vw * 0.4)'}}
             />
           </div>
           

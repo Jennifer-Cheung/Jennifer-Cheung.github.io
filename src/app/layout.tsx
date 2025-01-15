@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" type="image/x-icon" href="/Avatar.png" />
+        <link rel="icon" type="image/x-icon" href="https://jennifer-cheung.github.io/Portfolio/Avatar.png" />
         <title>Jennifer Cheung</title>
       </head>
       <body className={`${dmSerifDisplay.className} ${dmSans.className}`}>
