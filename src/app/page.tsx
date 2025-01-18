@@ -331,7 +331,7 @@ export default function Home() {
         <span>Github: <Link href="https://github.com/Jennifer-Cheung" section={'contact-me'}>Jennifer-Cheung</Link></span>
         <Link href='https://jennifer-cheung.github.io/Portfolio/jennifer-cheung-cv.pdf' download section={'contact-me'}>Download my resume</Link>
         <embed
-          src='https://jennifer-cheung.github.io/Portfolio/jennifer-cheung-cv.pdf'
+          src='https://jennifer-cheung.github.io/jennifer-cheung-cv.pdf'
           type="application/pdf"
           width="1200px"
           height="1500px"
