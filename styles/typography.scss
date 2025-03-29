@@ -45,7 +45,7 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  letter-spacing: .08rem;
+  letter-spacing: 0.08rem;
   text-transform: uppercase;
 }
 
@@ -61,7 +61,7 @@
 @mixin body {
   /* Body */
   font-family: "DM Sans";
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -91,10 +91,13 @@ em {
   @include emphasis;
 }
 
-a, b {
+a,
+b {
   @include medium;
 }
 
-span, p, button {
+span,
+p,
+button {
   @include body;
 }
