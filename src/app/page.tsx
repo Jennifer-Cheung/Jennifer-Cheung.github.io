@@ -39,19 +39,16 @@ export default function Home() {
       threshold: 0,
     }
 
-    const observer = new IntersectionObserver(
-      (entries: IntersectionObserverEntry[]) => {
-        const entry = entries[0]
-        if (entry.target === aboutMeRef.current) {
-          setAboutMeVisible(entry.isIntersecting)
-        } else if (entry.target === projectsRef.current) {
-          setProjectsVisible(entry.isIntersecting)
-        } else if (entry.target === contactMeRef.current) {
-          setContactMeVisible(entry.isIntersecting)
-        }
-      },
-      options
-    )
+    const observer = new IntersectionObserver((entries: IntersectionObserverEntry[]) => {
+      const entry = entries[0]
+      if (entry.target === aboutMeRef.current) {
+        setAboutMeVisible(entry.isIntersecting)
+      } else if (entry.target === projectsRef.current) {
+        setProjectsVisible(entry.isIntersecting)
+      } else if (entry.target === contactMeRef.current) {
+        setContactMeVisible(entry.isIntersecting)
+      }
+    }, options)
     if (aboutMeRef.current) {
       observer.observe(aboutMeRef.current)
     }
@@ -102,13 +99,18 @@ export default function Home() {
       <div className={styles["about-me"]} ref={aboutMeRef}>
         <div className={styles.top}>
           <div className={styles.left}>
-            <strong className={styles.display}>
-              Hi, I am Jennifer Cheung!
-            </strong>
+            <strong className={styles.display}>Hi, I am Jennifer Cheung!</strong>
+            <Image
+              alt="Avatar"
+              src={Avatar}
+              width="500"
+              height="500"
+              className={styles["avatar-mobile"]}
+            />
             <p className={styles.paragraph}>
-              I am a Computer Engineering student studying at HKUST. Currently a
-              member of USThing, a student-initiated application development
-              team, member of the Web Team and leader of the UI/UX Team.
+              I am a Computer Engineering student studying at HKUST. Currently a member of USThing,
+              a student-initiated application development team, member of the Web Team and leader of
+              the UI/UX Team.
             </p>
             <div className={styles["buttons-wide"]}>
               <Button onClick={scrollToProjects}>Projects</Button>
@@ -123,7 +125,7 @@ export default function Home() {
             src={Avatar}
             width="500"
             height="500"
-            className={styles.avatar}
+            className={styles["avatar-desktop"]}
           />
         </div>
 
@@ -165,31 +167,22 @@ export default function Home() {
           </div>
 
           <div style={{ display: "flex", flexDirection: "row", gap: "1em" }}>
-            <Link
-              href="https://github.com/Jennifer-Cheung/whist"
-              section="projects"
-            >
+            <Link href="https://github.com/Jennifer-Cheung/whist" section="projects">
               Github Link
             </Link>
-            <Link
-              href="https://jennifer-cheung.github.io/whist/"
-              section="projects"
-            >
+            <Link href="https://jennifer-cheung.github.io/whist/" section="projects">
               Live Demo
             </Link>
           </div>
 
           <p>
-            Whist is a classic card game which typically entertains 4 players.
-            It is a complicated game which involves planning and strategy.
-            German Whist, the version implemented in this project, is a
-            variation of Whist. It has a simpler ruleset and can entertain 2
-            players at minimum.
+            Whist is a classic card game which typically entertains 4 players. It is a complicated
+            game which involves planning and strategy. German Whist, the version implemented in this
+            project, is a variation of Whist. It has a simpler ruleset and can entertain 2 players
+            at minimum.
           </p>
 
-          <p style={{ marginBottom: "0" }}>
-            The technologies used in this project include:
-          </p>
+          <p style={{ marginBottom: "0" }}>The technologies used in this project include:</p>
           <ul>
             <li>
               <b>React with Vite</b>
@@ -209,10 +202,9 @@ export default function Home() {
           </ul>
 
           <p>
-            The computer keeps track of a probability vector, which represents
-            how likely the player is to have a certain card. The computer will
-            guess the card the player would play and play the card with the best
-            chance of winning.
+            The computer keeps track of a probability vector, which represents how likely the player
+            is to have a certain card. The computer will guess the card the player would play and
+            play the card with the best chance of winning.
           </p>
         </div>
 
@@ -231,17 +223,13 @@ export default function Home() {
             />
           </div>
 
-          <Link
-            href="https://github.com/Jennifer-Cheung/ELEC3300"
-            section={"projects"}
-          >
+          <Link href="https://github.com/Jennifer-Cheung/ELEC3300" section={"projects"}>
             Github Link (partial code)
           </Link>
 
           <p>
-            This made this game for a school project. The total time taken for
-            me to build this project was about 1 week excluding the time I had
-            to work on other course work.
+            This made this game for a school project. The total time taken for me to build this
+            project was about 1 week excluding the time I had to work on other course work.
           </p>
 
           <p>Here is a demo video of the final product:</p>
@@ -261,22 +249,20 @@ export default function Home() {
           </div>
 
           <p>
-            The game is built on an STM32, with an LCD monitor (with ILI9341
-            driver) and Bluetooth connection to the controller. The hardware is
-            rather simple, and the focus is on the software part, which was
-            coded in C.
+            The game is built on an STM32, with an LCD monitor (with ILI9341 driver) and Bluetooth
+            connection to the controller. The hardware is rather simple, and the focus is on the
+            software part, which was coded in C.
           </p>
 
           <h3>Map scrolling</h3>
 
           <p>
-            The first thing I did was figuring out how to scroll the map when
-            Kirby moves around. After scrolling through the datasheet, I found a
-            useful built-in hardware feature of the chip – vertical scrolling.
-            Whenever I want to scroll the scene, I can just move the render
-            start pointer to the next line in the LCD memory without having to
-            render the whole map again on the software side. This saved me a lot
-            of rendering time and made the scrolling smoother.
+            The first thing I did was figuring out how to scroll the map when Kirby moves around.
+            After scrolling through the datasheet, I found a useful built-in hardware feature of the
+            chip – vertical scrolling. Whenever I want to scroll the scene, I can just move the
+            render start pointer to the next line in the LCD memory without having to render the
+            whole map again on the software side. This saved me a lot of rendering time and made the
+            scrolling smoother.
           </p>
 
           <h3>Walking animation</h3>
@@ -289,37 +275,32 @@ export default function Home() {
             >
               sprite sheet
             </Link>{" "}
-            online and cropped out the key frames. To animate Kirby, I looped
-            through the key frames. And to make Kirby move left and right, I
-            redrew one column of background pixels and drew Kirby at the new
-            position.
+            online and cropped out the key frames. To animate Kirby, I looped through the key
+            frames. And to make Kirby move left and right, I redrew one column of background pixels
+            and drew Kirby at the new position.
           </p>
 
           <h3>State changes</h3>
 
           <p>
-            This was the most time-consuming and the hardest part of the
-            project. It surprised me that there were so many states in the game
-            but I had never noticed. In total, there were more than 12 states,
-            but to keep things simple, I only kept the main states.
+            This was the most time-consuming and the hardest part of the project. It surprised me
+            that there were so many states in the game but I had never noticed. In total, there were
+            more than 12 states, but to keep things simple, I only kept the main states.
           </p>
 
           <p>
-            To keep track of the different variables and states, I made a Kirby
-            struct to pass to functions. The entire game was wrapped in a big
-            game loop, which consisted of updating the state and variables from
-            the controller inputs, moving Kirby to the correct X and Y
-            positions, rendering the sprite, and checking the winning and losing
-            conditions.
+            To keep track of the different variables and states, I made a Kirby struct to pass to
+            functions. The entire game was wrapped in a big game loop, which consisted of updating
+            the state and variables from the controller inputs, moving Kirby to the correct X and Y
+            positions, rendering the sprite, and checking the winning and losing conditions.
           </p>
 
           <h3>Tile system</h3>
 
           <p>
-            This was my favourite part of this project because tiles work
-            magically together. From the sprite sheet site I found that the
-            original game used a 24px tile system, and I laid out the tiles on
-            the game map like this:
+            This was my favourite part of this project because tiles work magically together. From
+            the sprite sheet site I found that the original game used a 24px tile system, and I laid
+            out the tiles on the game map like this:
           </p>
 
           <div className={styles["image-wrapper"]}>
@@ -334,45 +315,42 @@ export default function Home() {
           </div>
 
           <p>
-            There are some hills and valleys, but as they are rectangular, it
-            was not too difficult to build the collision detection algorithm for
-            them. The slope, however, was a tricky part. I calculated the
-            gradient of the slope section and made the entire slope a ground,
+            There are some hills and valleys, but as they are rectangular, it was not too difficult
+            to build the collision detection algorithm for them. The slope, however, was a tricky
+            part. I calculated the gradient of the slope section and made the entire slope a ground,
             not an obstacle, unlike the rectangular hills.
           </p>
 
           <p>
-            The tile system also enabled the game to check for wins or losses.
-            When Kirby approaches the goal on the right of the map, it counts as
-            a win; when he falls below the screen, it counts as a lose.
+            The tile system also enabled the game to check for wins or losses. When Kirby approaches
+            the goal on the right of the map, it counts as a win; when he falls below the screen, it
+            counts as a lose.
           </p>
 
           <h3>Sir Kibble</h3>
 
           <p>
-            I had some time left so I made Sir Kibble as an enemy. I rendered
-            him and his boomerang like how I rendered Kirby. And we can see him
-            swinging his weapon as Kirby approaches him.
+            I had some time left so I made Sir Kibble as an enemy. I rendered him and his boomerang
+            like how I rendered Kirby. And we can see him swinging his weapon as Kirby approaches
+            him.
           </p>
 
           <p>
-            Kirby can swallow him when they are close enough. However, due to
-            the time limit, we could not finish the ability change, which was a
-            shame since that would require us finish setting up an SD card as an
-            external memory because the sprites were too large for the on-board
-            memory to store.
+            Kirby can swallow him when they are close enough. However, due to the time limit, we
+            could not finish the ability change, which was a shame since that would require us
+            finish setting up an SD card as an external memory because the sprites were too large
+            for the on-board memory to store.
           </p>
 
           <p>
-            One other note was the drop in frame rate once Kirby and Sir Kibble
-            were in the same frame, as the MCU had to render both
-            simultaneously. I had not figured out the way to optimise the frame
-            rate, but it showed how complicated game design truly is.
+            One other note was the drop in frame rate once Kirby and Sir Kibble were in the same
+            frame, as the MCU had to render both simultaneously. I had not figured out the way to
+            optimise the frame rate, but it showed how complicated game design truly is.
           </p>
 
           <p>
-            Overall, this was a fun project and I have learned a lot about
-            embedded systems and game design from this project.
+            Overall, this was a fun project and I have learned a lot about embedded systems and game
+            design from this project.
           </p>
         </div>
 
@@ -391,22 +369,17 @@ export default function Home() {
             />
           </div>
 
-          <Link
-            href="https://github.com/Nidhi153/ZubinHackathon"
-            section={"projects"}
-          >
+          <Link href="https://github.com/Nidhi153/ZubinHackathon" section={"projects"}>
             Github link (click to see our full project description!)
           </Link>
 
           <p>
-            I joined the Code to Give Hackathon in Summer 2024 with a friend and
-            our team got second place in the competition. We built a content
-            management application for a charity organisation called Zubin
-            Foundation, who supports ethical minorities in Hong Kong. The
-            application included 3 user roles, member, volunteer, and admin.
-            Members and volunteers can sign up for events through the platform,
-            and admins can monitor the states of the events and send messages to
-            members in real time through WhatsApp.
+            I joined the Code to Give Hackathon in Summer 2024 with a friend and our team got second
+            place in the competition. We built a content management application for a charity
+            organisation called Zubin Foundation, who supports ethical minorities in Hong Kong. The
+            application included 3 user roles, member, volunteer, and admin. Members and volunteers
+            can sign up for events through the platform, and admins can monitor the states of the
+            events and send messages to members in real time through WhatsApp.
           </p>
 
           <div className={styles["image-wrapper"]}>
@@ -455,20 +428,17 @@ export default function Home() {
           </div>
 
           <p>
-            I designed the entire UI interface on Figma and contributed most of
-            the work on frontend styling. The time was quite tight because we
-            were only given 3 and a half days to develop the whole app, and I
-            only finished designing all the pages 6 hours from the start and
-            ended at 3am in the morning! But it was worth it as it turned out
-            great and we could get to work in the morning as soon as possible.
-            For the frontend, we used NextJS as the primary framework and Sass
-            to do the styling.
+            I designed the entire UI interface on Figma and contributed most of the work on frontend
+            styling. The time was quite tight because we were only given 3 and a half days to
+            develop the whole app, and I only finished designing all the pages 6 hours from the
+            start and ended at 3am in the morning! But it was worth it as it turned out great and we
+            could get to work in the morning as soon as possible. For the frontend, we used NextJS
+            as the primary framework and Sass to do the styling.
           </p>
 
           <p>
-            Overall, it was quite a stressed period, but it was rewarding and
-            fun to work with such an amazing group of teammates, and we were
-            very happy to get a prize in the end.
+            Overall, it was quite a stressed period, but it was rewarding and fun to work with such
+            an amazing group of teammates, and we were very happy to get a prize in the end.
           </p>
         </div>
 
@@ -488,9 +458,8 @@ export default function Home() {
           </div>
 
           <p>
-            I joined USThing, a student-led application development team in
-            Spring 2024, and currently a member of the Web Team and the leader
-            of the UI/UX Team. Check out{" "}
+            I joined USThing, a student-led application development team in Spring 2024, and
+            currently a member of the Web Team and the leader of the UI/UX Team. Check out{" "}
             <Link href="https://usthing.xyz/" section={"projects"}>
               our official site here
             </Link>
@@ -509,20 +478,18 @@ export default function Home() {
           </div>
 
           <p>
-            On the web team&apos;s side, we are using NextJS as our primary
-            framework, alongside with Tailwind, Drizzle, and other libraries to
-            build our web applications. On the UI/UX team&apos;s side, I do
-            project management and task coordination so our members can work
-            comfortably together. Currently, we are building a web application,
-            which will be released by February. Stay tuned for our updates! ;)
+            On the web team&apos;s side, we are using NextJS as our primary framework, alongside
+            with Tailwind, Drizzle, and other libraries to build our web applications. On the UI/UX
+            team&apos;s side, I do project management and task coordination so our members can work
+            comfortably together. Currently, we are building a web application, which will be
+            released by February. Stay tuned for our updates! ;)
           </p>
         </div>
 
         {/* Robotics team member */}
         <div className={styles["project-block"]}>
           <h2>
-            Robotics team member <br></br> RoboGames 2023: RoboMagellan second
-            place
+            Robotics team member <br></br> RoboGames 2023: RoboMagellan second place
           </h2>
 
           <div className={styles["image-wrapper"]}>
@@ -537,10 +504,10 @@ export default function Home() {
           </div>
 
           <p>
-            I joined the Robotics Team in Jan 2023, and it took us 3 months to
-            build a GPS-controlled rover to join RoboGames 2023 in Pleasanton,
-            California, USA. We used the ArduPilot system to control the car,
-            letting it move according to the GPS markers on the map.
+            I joined the Robotics Team in Jan 2023, and it took us 3 months to build a
+            GPS-controlled rover to join RoboGames 2023 in Pleasanton, California, USA. We used the
+            ArduPilot system to control the car, letting it move according to the GPS markers on the
+            map.
           </p>
 
           <div className={styles["image-wrapper"]}>
@@ -555,10 +522,9 @@ export default function Home() {
           </div>
 
           <p>
-            The vehicle consisted of a Pixhawk controller with an embedded
-            compass, a GPS sensor, and other mechanical parts. It was our first
-            time working with GPS, so there were many things that we did not
-            know and had to do a lot of research to learn the basics of a
+            The vehicle consisted of a Pixhawk controller with an embedded compass, a GPS sensor,
+            and other mechanical parts. It was our first time working with GPS, so there were many
+            things that we did not know and had to do a lot of research to learn the basics of a
             self-controlled car with a GPS and compass system.
           </p>
 
@@ -574,14 +540,12 @@ export default function Home() {
           </div>
 
           <p>
-            Since the senior members in my group were also busy with other
-            events in the competition, I had to do most of the research and
-            testing work. There were many failed attempts on adding extra
-            sensors and algorithms, such as a lidar, angle detection, and
-            path-finding algorithms, and finally we could only bring a simple
-            version of the car to the competition. Luckily, the weather was nice
-            and there was not much error in the GPS positioning, so we actually
-            made it to the goal and got second place.
+            Since the senior members in my group were also busy with other events in the
+            competition, I had to do most of the research and testing work. There were many failed
+            attempts on adding extra sensors and algorithms, such as a lidar, angle detection, and
+            path-finding algorithms, and finally we could only bring a simple version of the car to
+            the competition. Luckily, the weather was nice and there was not much error in the GPS
+            positioning, so we actually made it to the goal and got second place.
           </p>
 
           <div className={styles["image-wrapper"]}>
@@ -608,10 +572,7 @@ export default function Home() {
         </span>
         <span>
           Github:{" "}
-          <Link
-            href="https://github.com/Jennifer-Cheung"
-            section={"contact-me"}
-          >
+          <Link href="https://github.com/Jennifer-Cheung" section={"contact-me"}>
             Jennifer-Cheung
           </Link>
         </span>

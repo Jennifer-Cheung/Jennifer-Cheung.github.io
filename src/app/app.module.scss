@@ -26,33 +26,32 @@
   gap: 2.25rem;
 }
 
-.display {
-  @media (width < 1024px) {
-    position: absolute;
-  }
-}
-
-.paragraph {
-  @media (width < 1024px) {
-    margin-top: 80px;
-  }
-  @media (width < 425px) {
-    margin-top: 120px;
-  }
-}
-
-.avatar {
+// Desktop avatar - shown on the right side on larger screens
+.avatar-desktop {
   height: auto;
   width: clamp(100px, 20vw, 500px);
+
   @media (width < 1024px) {
-    margin-top: 60px;
+    display: none;
+  }
+}
+
+// Mobile avatar - shown between heading and paragraph on smaller screens
+.avatar-mobile {
+  height: auto;
+  width: clamp(150px, 40vw, 300px);
+  align-self: center;
+  margin: 1.5rem 0;
+
+  @media (width >= 1024px) {
+    display: none;
   }
 }
 
 .buttons-wide {
   display: flex;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 1rem;
   align-self: stretch;
   flex-wrap: wrap;
   row-gap: 16px;
@@ -64,7 +63,7 @@
 .buttons-narrow {
   display: flex;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 1rem;
   align-self: stretch;
   flex-wrap: wrap;
   row-gap: 16px;
